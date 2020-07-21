@@ -1,0 +1,28 @@
+.note {
+  width: 500px;
+  min-height: 100px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  padding: 16px 24px;
+  background-color: #fff;
+  margin-bottom: 20px;
+}
+
+.note__title {
+  font-size: 28px;
+  line-height: 42px;
+  font-weight: bold;
+  color: #000;
+}
+
+.note__body-container {
+  margin-top: 8px;
+}
+
+.note__body-text {
+  margin: 0;
+  font-size: 16px;
+  line-height: 24px;
+  color: #555770;
+}
