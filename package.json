@@ -20,7 +20,8 @@
     "build:server": "cd server && yarn run build",
     "start": "concurrently \"yarn run start:client\" \"yarn run start:server\"",
     "start:client": "cd client && yarn run start",
-    "start:server": "cd server && yarn run start"
+    "start:server": "cd server && yarn run start",
+    "deploy:server": "git subtree push --prefix server heroku master"
   },
   "devDependencies": {
     "concurrently": "5.2.0"
