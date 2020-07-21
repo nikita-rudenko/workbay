@@ -1,0 +1,28 @@
+{
+  "name": "workbay",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "Me",
+  "license": "ISC",
+  "scripts": {
+    "dev": "concurrently --kill-others-on-fail \"yarn run dev:client\" \"yarn run dev:server\"",
+    "dev:client": "cd client && yarn start",
+    "dev:server": "cd server && yarn run dev",
+    "build": "concurrently \"yarn run build:client\" \"yarn run build:server\"",
+    "build:client": "cd client && yarn run build",
+    "build:server": "cd server && yarn run build",
+    "start": "concurrently \"yarn run start:client\" \"yarn run start:server\"",
+    "start:client": "cd client && yarn run start",
+    "start:server": "cd server && yarn run start"
+  },
+  "devDependencies": {
+    "concurrently": "5.2.0"
+  }
+}
