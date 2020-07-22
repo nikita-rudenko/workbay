@@ -1,5 +1,5 @@
 export type Note = {
-  _id: string;
+  _id?: string;
   title: string;
   body: string;
 };
@@ -7,6 +7,7 @@ export type Note = {
 export type NotesList = Note[];
 
 export type NotesState = {
+  isUpdating: boolean;
   isLoading: boolean;
   notesList: NotesList;
   error: string | null;
