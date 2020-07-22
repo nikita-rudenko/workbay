@@ -7,8 +7,9 @@ const selectFeatureNotes = (state: RootState) => state.notes as NotesState;
 
 export const selectNotes = createSelector(
   [selectFeatureNotes],
-  ({ isLoading, notesList, error }) => ({
+  ({ isLoading, isUpdating, notesList, error }) => ({
     isLoading,
+    isUpdating,
     notesList: notesList as NotesList,
     error,
   })
