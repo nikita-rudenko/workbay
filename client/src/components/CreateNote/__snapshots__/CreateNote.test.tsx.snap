@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CreateNote renders correctly 1`] = `
+<div>
+  <div
+    class="create-note"
+    role="form"
+  >
+    <div
+      class="create-note__input create-note__input--body create-note__input--initial"
+      contenteditable="true"
+      data-placeholder="✍️ Take a note..."
+      role="textbox"
+    />
+  </div>
+</div>
+`;
