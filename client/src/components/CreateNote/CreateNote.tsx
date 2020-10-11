@@ -36,10 +36,11 @@ const AddNote = () => {
   }
 
   function saveNote() {
-    if (noteContent.title || noteContent.body) {
-      sendNote();
-      cleanupAfterSave();
-    }
+    // For test purposes
+    // if (noteContent.title || noteContent.body) {
+    sendNote();
+    cleanupAfterSave();
+    // }
     setIsExpanded(false);
   }
 
@@ -59,10 +60,11 @@ const AddNote = () => {
   }
 
   return (
-    <div className="create-note" ref={formRef}>
+    <div className="create-note" role="form" ref={formRef}>
       {isExpanded ? (
         <>
           <div
+            role="textbox"
             key="active-title"
             data-placeholder="Title"
             data-type="title"
@@ -74,6 +76,7 @@ const AddNote = () => {
           />
 
           <div
+            role="textbox"
             key="active-body"
             ref={bodyRef}
             onInput={updateInputValue}
@@ -85,13 +88,14 @@ const AddNote = () => {
           />
 
           <div className="create-note__footer">
-            <div className="create-note__save" onClick={saveNote}>
+            <div role="button" className="create-note__save" onClick={saveNote}>
               Save
             </div>
           </div>
         </>
       ) : (
         <div
+          role="textbox"
           key="initial"
           onClick={expand}
           onFocus={expand}
