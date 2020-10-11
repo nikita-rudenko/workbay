@@ -1,7 +1,6 @@
 {
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "conventionalCommits.scopes": [
-    "Notes"
-  ]
+  "conventionalCommits.scopes": ["Notes"],
+  "jest.pathToJest": "cd client && yarn test"
 }
